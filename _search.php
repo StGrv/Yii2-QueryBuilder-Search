@@ -19,7 +19,17 @@ $rows = $query
     //->orWhere(["CONCAT(mark,' ',model,' ',engine) LIKE ?", $search])
     ->limit(10)
     ->all();
-
+    
+if ($search === '') {
+    echo "Please, add a few words to your search request!" ;
+}
+    
+else if (!$rows) {
+    echo "No records have been found!" ;
+}    
+    
+else {
+    
 foreach ($rows as $row) {
     
     echo "Mark: ".$row['mark']
@@ -27,14 +37,8 @@ foreach ($rows as $row) {
     .", Engine: ".$row['engine'] ."<br>"
     .", Transmission: ".$row['transmission'] ."<br>" ;        
     }
-}
+ }
 
-if (!$rows) {
-    echo "No results match your search!" ;
 }
 
 ?>
-
-
-    
-
