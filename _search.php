@@ -31,14 +31,12 @@ else if (!$rows) {
 else {
     
 foreach ($rows as $row) {
-    
     echo "Mark: ".$row['mark']
     .", Model: ".$row['model'] ."<br>"
     .", Engine: ".$row['engine'] ."<br>"
     .", Transmission: ".$row['transmission'] ."<br>" ;        
     }
  }
-
 }
 
 ?>
