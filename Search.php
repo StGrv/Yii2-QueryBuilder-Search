@@ -23,11 +23,9 @@ $rows = $query
 if ($search === '') {
     echo "Please, add a few words to your search request!" ;
 }
-    
 else if (!$rows) {
     echo "No records have been found!" ;
 }    
-    
 else {
     
 foreach ($rows as $row) {
